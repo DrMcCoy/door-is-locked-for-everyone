@@ -1,0 +1,31 @@
+{
+  "id": "door-is-locked-for-everyone",
+  "title": "Door is Locked for Everyone",
+  "description": "Broadcast locked door sounds to every connected client",
+  "author": "Sven \"DrMcCoy\" Hesse",
+  "authors": [
+    {
+      "name": "Sven \"DrMcCoy\" Hesse",
+      "email": "drmccoy@drmccoy.de",
+      "url": "https://drmccoy.de/"
+    }
+  ],
+  "version": "0.0.1",
+  "minimumCoreVersion": 11,
+  "compatibility": {
+    "minimum": 11,
+    "verified": "11.315"
+  },
+  "manifestPlusVersion": "1.2.0",
+  "url": "https://github.com/DrMcCoy/door-is-locked-for-everyone",
+  "manifest": "https://github.com/DrMcCoy/door-is-locked-for-everyone/releases/latest/download/module.json",
+  "download": "https://github.com/DrMcCoy/door-is-locked-for-everyone/releases/latest/download/module.zip",
+  "license": "./LICENSE",
+  "readme": "./README.md",
+  "bugs": "https://github.com/DrMcCoy/door-is-locked-for-everyone/issues",
+  "changelog": "https://github.com/DrMcCoy/door-is-locked-for-everyone/raw/main/ChangeLog",
+  "esmodules": [
+    "lib/libwrapper_shim.js",
+    "src/main.js"
+  ]
+}
