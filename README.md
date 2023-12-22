@@ -15,3 +15,4 @@ Door is Locked for Everyone is released under the terms of the [BSD
 
 Door is Locked for Everyone can be found in the following places:
 - [Door is Locked for Everyone on GitHub](https://github.com/DrMcCoy/door-is-locked-for-everyone)
+- [Door is Locked for Everyone on the FoundryVTT website](https://foundryvtt.com/packages/door-is-locked-for-everyone)
