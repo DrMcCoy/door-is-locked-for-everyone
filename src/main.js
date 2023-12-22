@@ -24,3 +24,38 @@
  * OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
  * OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
+
+"use strict";
+
+import {libWrapper} from "../lib/libwrapper_shim.js";
+
+Hooks.once("init", () => {
+	libWrapper.register(
+		"door-is-locked-for-everyone",
+		"DoorControl.prototype._onMouseDown",
+		function (wrapped, event) {
+			if (onDoorMouseDown.call(this, event))
+				return true;
+
+			return wrapped(event);
+		},
+		"MIXED",
+	);
+});
+
+function onDoorMouseDown(event) {
+	if (!game.user.can("WALL_DOORS"))
+		return false;
+	if (game.paused && !game.user.isGM)
+		return false;
+
+	if (this.wall.document.ds !== CONST.WALL_DOOR_STATES.LOCKED)
+		return false;
+
+	const testSound = CONFIG.Wall.doorSounds[this.wall.document.doorSound]?.test;
+	if (!testSound)
+		return false;
+
+	AudioHelper.play({src: testSound, volume: 1.0, autoplay: true, loop: false}, true);
+	return true;
+}
