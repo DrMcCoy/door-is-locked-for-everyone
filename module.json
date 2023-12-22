@@ -10,7 +10,7 @@
       "url": "https://drmccoy.de/"
     }
   ],
-  "version": "0.0.1",
+  "version": "1.0.0",
   "minimumCoreVersion": 11,
   "compatibility": {
     "minimum": 11,
